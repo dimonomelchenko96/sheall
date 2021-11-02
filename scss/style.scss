@@ -1,0 +1,90 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+    height: 100%
+}
+@import 'pages/homepage';
+@import 'pages/about';
+@import 'pages/work';
+@import 'pages/contacts';
+@import 'pages/faq';
+@import 'pages/congrants';
+@import 'pages/terms';
+@import 'pages/refund';
+@import 'pages/privacy';
+@import 'pages/risk';
+@import 'pages/payment';
+@import 'pages/begin';
+@import 'pages/setting';
+
+.button{
+    &__block{
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        // &:hover .button__elipse::before{
+        //     left: -10%;
+        // }
+    }
+    &__text{
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 27px;
+        color: #75481A;
+        &:hover{
+            color:#75481A;
+            text-decoration: none;
+        }
+        &:hover + a::before{
+            left: 30%;
+        }
+
+
+    }
+    
+    &__elipse{
+        position: relative;
+        display: block;
+        width: 58px;
+        height: 33px;
+        border: 1px solid #75481A;
+        border-radius: 50%;
+        transition: .3s ease;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url(../img/Arrow1.svg) ;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 10px;
+            top: 50%;
+            left: -50%;
+            transform: translate(30%,-50%);
+            transition: .3s ease;
+        }
+        &:hover::before{
+            left: 30%;
+        }
+
+    }
+}
+
+

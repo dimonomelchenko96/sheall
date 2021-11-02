@@ -1,0 +1,194 @@
+.faq{
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    background-color: #3F3D3C;
+    background-image: url(../img/faq-stars.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 67px;
+    padding: 112px 0 100px 0;
+    &__title{
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 72px;
+        line-height: 80px;
+        color: #F6F3ED;
+        margin-bottom: 40px;
+    }
+    &__subtitle{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color: #F5F5F5;
+        width: 50%;
+    }
+    &__accordeon{
+        width: 75%;
+        align-self: flex-end;
+        margin-top: 60px;
+        &-title{
+            position: relative;
+            margin: 5px 0;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #F5F5F5;
+            transition: .3s;
+            &::after{
+                content: '';
+                position: absolute;
+                right: 0;
+                background-image:url(../img/faq-arrow.svg);
+                background-repeat: no-repeat;
+                transform: rotate(180deg);
+                width: 23px;
+                height: 23px;
+                transition: transform .5s ease;
+            }
+        }
+        &__bottom{
+            &-title{
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+                color: #F5F5F5;
+            }
+            &-text{
+                margin-top: 14px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+                color: #E8E3DB;
+            }
+        }
+        &-text{
+            visibility: hidden;
+            transform: translateY(-100%);
+            max-height: 0;
+            opacity: 0;
+            transition: all .5s;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #E8E3DB;
+        }
+        &-divider{
+            border: 1px solid #F6F3ED;
+            margin: 14px 0px 0 0;
+        }
+        &-item{
+            cursor: pointer;
+            margin-bottom: 60px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &.active{
+                .faq__accordeon{
+                    &-text{
+                        visibility: visible;
+                        max-height: 1000px;
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                .faq__accordeon-title::after{
+                    transform: rotate(0deg);
+                }
+                .faq__accordeon-divider{
+                    margin: 14px 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .faq{
+        padding-top: 177px;
+        &__title{
+            font-size: 52px;
+            line-height: 56px;
+        }
+        &__subtitle{
+            width: 80%;
+        }
+    }
+}
+@media (max-width: 769px) {
+    .faq{
+        padding: 110px 0 25px 0;
+        &__title{
+            font-size: 42px;
+            line-height: 46px;
+            margin-bottom: 30px;
+        }
+        &__subtitle{
+            margin-bottom: 0;
+        }
+        &__accordeon{
+            margin-top: 30px;
+            &-item{
+                margin-bottom: 40px;
+            }
+            &-title{
+                padding-right: 50px;
+            }
+
+        }
+
+    }
+}
+@media (max-width: 576px) {
+    .faq{
+        background-image: url(../img/faq-stars-mob.svg);
+        background-position: right 30px;
+        &__title{
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 12px;
+        }
+        &__subtitle{
+            font-size: 16px;
+            line-height: 22px;
+            width: 88%;
+        }
+        &__accordeon{
+            width: 100%;
+            &-title{
+                font-size: 14px;
+                line-height: 17px;
+                &::after{
+                    width: 21px;
+                    height: 18px;
+                    top: 0 ;
+                }
+            }
+            &__bottom{
+                &-title{
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+                &-text{
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+            &-text{
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+    }
+}

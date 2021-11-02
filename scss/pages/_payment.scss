@@ -1,0 +1,87 @@
+.payment{
+    padding: 60px 0 139px 0;
+    background: #F5F5F5;
+    &__title{
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 85px;
+        display: flex;
+        align-items: center;
+        color: #3F3D3C;
+        margin-bottom: 0;
+    }
+    &__text{
+        margin-top: 40px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #464646;
+    }
+    &__subtitle{
+        span{
+            font-weight: 700;
+        }
+    }
+    &__descr{
+        margin-top: 20px;
+    }
+    &__connect{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6A6A6A;
+        margin-top: 34px;
+        &-title{
+            font-weight: 500;
+            color: #000000;
+            margin: 0;
+        }
+        &-subtitle{
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        &-contact{
+            margin-bottom: 15px;
+            a{
+                color: inherit;
+                font-weight: 700;
+            }
+        }
+    }
+}
+@media (max-width:993px) {
+    .payment{
+        padding: 89px 0 63px 0;
+        &__title{
+            font-size: 55px;
+            line-height: 70px;
+        }
+    }
+}
+@media (max-width: 769px) {
+    .payment{
+        &__title{
+            font-size: 45px;
+            line-height: 55px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .payment{
+        &__title{
+            font-size: 30px;
+            line-height: 40px;
+        }
+        &__text , &__connect{
+            margin-top: 30px;
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+}

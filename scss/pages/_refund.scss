@@ -1,0 +1,100 @@
+.refund{
+    padding: 60px 0 100px 0;
+    background-color: #F5F5F5;
+    &__title{
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 85px;
+        color: #3F3D3C;
+    }
+    &__subtitle{
+        margin-top: 40px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #464646;
+    }
+    &__header{
+        margin-top: 20px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3F3D3C;
+    }
+    &__text{
+        margin-top: 10px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #464646;
+    }
+    &__list{
+        list-style-type: none;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #464646;
+        padding-top: 10px;
+        &-item{
+            position: relative;
+            padding-left: 20px;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background-color: #464646;
+                border-radius: 100%;
+                left: 10px;
+                top: 7px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .refund{
+        padding-top: 125px;
+        &__title{
+            font-size: 55px;
+            line-height: 70px;
+        }
+    }
+}
+@media (max-width: 769px) {
+    .refund{
+        &__title{
+            font-size: 45px;
+            line-height: 55px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .refund{
+        padding: 89px 0 40px 0;
+        &__title{
+            font-size: 30px;
+            line-height: 40px;
+        }
+        &__subtitle{
+            margin-top: 30px;
+        }
+        &__text{
+            font-size: 13px;
+            line-height: 16px;
+        }
+        &__header{
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

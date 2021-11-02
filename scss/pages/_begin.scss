@@ -1,0 +1,115 @@
+.begin{
+    padding: 60px 0 139px 0;
+    background: #F5F5F5;
+    &__title{
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 85px;
+        color: #3F3D3C;
+        margin-bottom: 0;
+        span{
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
+    &__subtitle{
+        margin-top: 24px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+    }
+    &__text{
+        margin-top: 46px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6A6A6A;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__block{
+        list-style-type: none;
+        li {
+            margin-bottom: 30px;
+        }
+        &-title{
+            color: #000000;
+            font-weight: 500;
+        }
+        &-text{
+            margin-top: 20px;
+        }
+    }
+    &__connect{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6A6A6A;
+        margin-top: 34px;
+        &-title{
+            font-weight: 500;
+            color: #000000;
+            margin: 0;
+        }
+        &-subtitle{
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        &-contact{
+            margin-bottom: 15px;
+            a{
+                color: inherit;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (max-width:993px) {
+    .begin{
+        padding: 89px 0 63px 0;
+        &__title{
+            font-size: 55px;
+            line-height: 70px;
+        }
+    }
+}
+@media (max-width: 769px) {
+    .begin{
+        &__title{
+            font-size: 45px;
+            line-height: 55px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .begin{
+        &__title{
+            font-size: 30px;
+            line-height: 40px;
+        }
+        &__text , &__connect{
+            margin-top: 23px;
+            font-size: 13px;
+            line-height: 16px;
+        }
+        &__block{
+            li{
+                margin-bottom: 20px;
+            }
+            &-title + &-text{
+                margin-top: 10px;
+            }
+        }
+    }
+}
